@@ -1,0 +1,93 @@
+marks = []
+
+# Get marks of 5 students
+for i in range(5):
+    mark = int(input("Enter student mark: "))
+   #append()
+    marks.append(mark)
+
+# Display all marks
+print("Student Marks:", marks)
+
+# Add a new student's mark
+marks.append(int(input("Enter new student mark: ")))
+print("After append:", marks)
+
+# Insert a mark at second position
+marks.insert(1, int(input("Enter mark to insert: ")))
+print("After insert:", marks)
+
+# Remove a particular mark
+remove_mark = int(input("Enter mark to remove: "))
+marks.remove(remove_mark)
+print("After remove:", marks)
+
+# Highest and lowest marks
+print("Highest Mark:", max(marks))
+print("Lowest Mark:", min(marks))
+
+# Total and average
+total = sum(marks)
+average = total / len(marks)
+
+print("Total Marks:", total)
+print("Average Marks:", average)
+
+# Sort in ascending order
+marks.sort()
+print("Sorted Marks:", marks)
+
+# Count students scoring above 75
+count = 0
+for mark in marks:
+    if mark > 75:
+        count += 1
+
+print("Students scored above 75:", count)
+
+# Display marks greater than or equal to 50
+print("Marks greater than or equal to 50:")
+for mark in marks:
+    if mark >= 50:
+        print(mark)
+
+tuple
+# Create a tuple containing 5 products
+products = ("Laptop", "Mobile", "Headphones", "Mouse", "Keyboard")
+
+# Display all products
+print("Shopping Cart:", products)
+
+# Display first and last products
+print("First Product:", products[0])
+print("Last Product:", products[-1])
+
+# Display first 3 products
+print("First 3 Products:", products[:3])
+
+# Check product availability
+product = input("Enter product to check: ")
+
+if product in products:
+    print(product, "is available")
+else:
+    print(product, "is not available")
+
+# Count occurrences of a product
+print("Mobile Count:", products.count("Mobile"))
+
+# Find position of a product
+print("Position of Mouse:", products.index("Mouse"))
+
+# Concatenate another tuple
+new_products = ("Tablet", "Smart Watch")
+updated_cart = products + new_products
+print("Updated Cart:", updated_cart)
+
+# Repeat tuple twice
+print("Repeated Cart:", products * 2)
+
+# Iterate through the tuple
+print("Individual Products:")
+for item in products:
+    print(item)
